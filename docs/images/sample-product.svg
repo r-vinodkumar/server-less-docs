@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title description">
+  <title id="title">Sample product diagram</title>
+  <desc id="description">A simple product dashboard illustration with feature cards and a chart.</desc>
+  <rect width="960" height="540" rx="28" fill="#eef4fb"/>
+  <rect x="70" y="58" width="820" height="424" rx="18" fill="#ffffff" stroke="#cbd8e6" stroke-width="3"/>
+  <rect x="70" y="58" width="820" height="66" rx="18" fill="#1769aa"/>
+  <path d="M70 106h820v18H70z" fill="#1769aa"/>
+  <circle cx="108" cy="91" r="10" fill="#b7e3ff"/>
+  <rect x="138" y="83" width="180" height="16" rx="8" fill="#ffffff" opacity=".9"/>
+  <rect x="110" y="158" width="210" height="128" rx="12" fill="#e8f5ff"/>
+  <rect x="345" y="158" width="210" height="128" rx="12" fill="#f0ecff"/>
+  <rect x="580" y="158" width="270" height="270" rx="12" fill="#f8fafc" stroke="#e1e8ef" stroke-width="2"/>
+  <rect x="132" y="183" width="110" height="12" rx="6" fill="#7c9bb7"/>
+  <rect x="132" y="215" width="145" height="40" rx="8" fill="#4ea6d8"/>
+  <rect x="368" y="183" width="110" height="12" rx="6" fill="#9182c8"/>
+  <rect x="368" y="215" width="145" height="40" rx="8" fill="#9582db"/>
+  <path d="M620 374 677 320l47 23 68-100" fill="none" stroke="#2584bd" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="620" cy="374" r="9" fill="#2584bd"/>
+  <circle cx="677" cy="320" r="9" fill="#2584bd"/>
+  <circle cx="724" cy="343" r="9" fill="#2584bd"/>
+  <circle cx="792" cy="243" r="9" fill="#2584bd"/>
+  <path d="M620 393h190M620 352h190M620 310h190M620 268h190" stroke="#dce5ed" stroke-width="2"/>
+  <rect x="110" y="315" width="445" height="22" rx="11" fill="#d7e3ed"/>
+  <rect x="110" y="356" width="390" height="16" rx="8" fill="#e7edf3"/>
+  <rect x="110" y="390" width="420" height="16" rx="8" fill="#e7edf3"/>
+</svg>

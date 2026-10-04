@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Local Docs Side Panel",
+  "version": "1.0",
+  "description": "Offline local notes with real-time active tab routing",
+  "permissions": [
+    "sidePanel",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "action": {
+    "default_title": "Open Docs Side Panel"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "docs/*",
+        "docs/images/*",
+        "manifest-docs.json"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

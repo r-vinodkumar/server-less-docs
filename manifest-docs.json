@@ -1,0 +1,19 @@
+{
+  "documents": [
+    { "title": "Welcome", "path": "docs/welcome" },
+    { "title": "Product A", "path": "docs/products/product-a/index" },
+    { "title": "Getting started", "path": "docs/products/product-a/getting-started" },
+    { "title": "Product B", "path": "docs/products/product-b/index" }
+  ],
+  "domains": {
+    "your-site.example": {
+      "default": "docs/products/product-a/index",
+      "routes": [
+        {
+          "path": "/getting-started",
+          "doc": "docs/products/product-a/getting-started"
+        }
+      ]
+    }
+  }
+}

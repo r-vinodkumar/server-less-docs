@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Base</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Drawer Backdrop -->
+  <div id="sidebarBackdrop"></div>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button id="menuToggle" class="menu-btn" type="button" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <span class="panel-title">Docs</span>
+      <a id="openWebsiteLink" class="open-website-link" target="_blank" rel="noopener">Open as website</a>
+    </div>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+      <div id="searchResults" class="search-dropdown"></div>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <!-- Sliding Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <nav id="navLinks" class="nav-links">
+        <div class="loading-text">Loading navigation...</div>
+      </nav>
+    </aside>
+
+    <!-- Content Pane -->
+    <main class="content-area">
+      <div id="tabBanner" class="tab-banner" style="display: none;"></div>
+      <article id="content">
+        <em>Loading knowledge base...</em>
+      </article>
+    </main>
+  </div>
+
+  <div id="imageViewer" class="image-viewer" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+    <button id="imageViewerClose" class="image-viewer-close" type="button" aria-label="Close image preview">&times;</button>
+    <figure class="image-viewer-figure">
+      <img id="imageViewerImage" alt="">
+      <figcaption id="imageViewerCaption"></figcaption>
+    </figure>
+  </div>
+
+  <!-- Local libraries (No CDN) -->
+  <script src="local-data.js"></script>
+  <script src="marked.min.js"></script>
+  <script src="minisearch.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

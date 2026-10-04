@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title description">
+  <title id="title">A colorful mountain landscape</title>
+  <desc id="description">Sunset over layered blue mountains and a quiet lake.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7a77b"/>
+      <stop offset="1" stop-color="#f7d9a3"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5795a4"/>
+      <stop offset="1" stop-color="#274d69"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#sky)"/>
+  <circle cx="710" cy="155" r="66" fill="#ffe9ae"/>
+  <path d="M0 350 180 150l130 150 145-190 210 240 130-150 165 160v180H0Z" fill="#526d83"/>
+  <path d="m330 300 125-190 115 132-68-23-45 39-39-22-46 47Z" fill="#edf0dc"/>
+  <path d="m550 350 245-250 210 230v210H400Z" fill="#354f69"/>
+  <path d="m708 190 87-90 96 105-61-30-32 35-44-29-37 29Z" fill="#e9e8d6"/>
+  <path d="M0 365q140-42 280 0t280 0 280 0 280 0v175H0Z" fill="url(#water)"/>
+  <path d="M0 405q130-22 260 0t260 0 260 0 260 0" fill="none" stroke="#b2d0c6" stroke-width="5" opacity=".65"/>
+  <path d="M80 470q100-18 200 0t200 0" fill="none" stroke="#b2d0c6" stroke-width="3" opacity=".45"/>
+  <path d="M570 455q90-16 180 0t180 0" fill="none" stroke="#b2d0c6" stroke-width="3" opacity=".45"/>
+</svg>
