@@ -5,7 +5,7 @@ This reusable documentation hub is built from static files and does not require 
 ### Add product pages
 - Keep each product's pages together under `docs/products/<product-name>/`. Use `index.md` for the overview and add subpages beside it.
 - Add each page's title and extensionless path under `documents` in `manifest-docs.json`. Product pages are listed together in the sidebar and are always visible.
-- After adding, removing, or editing Markdown pages or changing the manifest, run `python build-local-data.py` to regenerate `local-data.js` for direct `file://` use.
+- After adding, removing, or editing Markdown pages or changing the manifest, run `node build-local-data.js` to regenerate `local-data.js` for direct `file://` use. Update navigation and URL routing only in `manifest-docs.json`; the bundle is generated from it.
 - Add an image anywhere in a Markdown document using a path relative to that document. For example, from a product folder, use `![A colorful landscape](../../images/sample-landscape.svg)`. Images can appear between headings and paragraphs, and you can include as many as needed.
 - Images open in a larger preview when clicked. Press Escape or click outside the preview to close it.
 - Selecting a page updates the URL with `?doc=docs/...`, which can be bookmarked or shared.

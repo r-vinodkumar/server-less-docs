@@ -2,6 +2,7 @@ let miniSearchInstance = null;
 let discoveredDocs = [];
 let domainConfig = null;
 let currentActiveDoc = '';
+let panelWindowId = null;
 
 // DOM Elements
 const contentElement = document.getElementById('content');
@@ -541,27 +542,14 @@ async function syncWithActiveTab() {
   try {
     const tabs = await chrome.tabs.query({
       active: true,
-      lastFocusedWindow: true,
+      currentWindow: true,
       windowType: 'normal'
     });
 
-    let targetTab = tabs && tabs[0];
-
-    if (!targetTab || !targetTab.url) {
-      const normalTabs = await chrome.tabs.query({
-        active: true,
-        windowType: 'normal'
-      });
-      targetTab = normalTabs.find(
-        (t) =>
-          t.url &&
-          !t.url.startsWith('chrome-extension://') &&
-          !t.url.startsWith('chrome://') &&
-          !t.url.startsWith('edge://')
-      );
-    }
+    const targetTab = tabs && tabs[0];
 
     if (targetTab) {
+      panelWindowId = targetTab.windowId;
       await evaluateTabUrl(targetTab);
     }
   } catch (err) {
@@ -572,6 +560,8 @@ async function syncWithActiveTab() {
 // Real-time tab listeners
 if (typeof chrome !== 'undefined' && chrome.tabs) {
   chrome.tabs.onActivated.addListener(async (activeInfo) => {
+    if (activeInfo.windowId !== panelWindowId) return;
+
     try {
       const tab = await chrome.tabs.get(activeInfo.tabId);
       evaluateTabUrl(tab);
@@ -581,7 +571,7 @@ if (typeof chrome !== 'undefined' && chrome.tabs) {
   });
 
   chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (tab && tab.active) {
+    if (tab && tab.active && tab.windowId === panelWindowId) {
       evaluateTabUrl(tab);
     }
   });
